@@ -6,9 +6,9 @@ export default function BottomNav() {
 
     const navItems = [
         { label: '홈', path: '/' },
-        { label: '불안모음', path: '/collection' },
+        { label: '내 활동', path: '/my-activity' },
         { label: '게시판', path: '/community' },
-        { label: '꾸미기', path: '/decorate' },
+        { label: '꾸미기', path: '/customize' },
     ];
 
     return (
@@ -17,8 +17,8 @@ export default function BottomNav() {
                 <button
                     key={item.path}
                     className={`bg-transparent border-none p-2 text-sm cursor-pointer transition-colors ${location.pathname === item.path
-                            ? 'text-black font-bold'
-                            : 'text-gray-500'
+                        ? 'text-black font-bold'
+                        : 'text-gray-500'
                         }`}
                     onClick={() => navigate(item.path)}
                 >
