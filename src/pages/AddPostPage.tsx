@@ -65,17 +65,21 @@ export default function AddPostPage() {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-4">
-                <button
-                    onClick={() => navigate(-1)}
-                    className="flex-1 py-4 rounded-lg bg-gray-200 text-body-1 font-bold text-gray-600 hover:bg-gray-300 transition-colors"
-                >
-                    취소하기
-                </button>
+                <div className="flex-1">
+                    <Button
+                        label="취소하기"
+                        onClick={() => navigate(-1)}
+                        variant="outline"
+                        size="lg"
+                        className="bg-gray-200 border-none text-gray-600 hover:bg-gray-300 font-bold"
+                    />
+                </div>
                 <div className="flex-1">
                     <Button
                         label="게시하기"
                         onClick={handlePublish}
                         disabled={!isFormValid}
+                        size="lg"
                     />
                 </div>
             </div>

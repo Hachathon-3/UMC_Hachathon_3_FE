@@ -58,7 +58,7 @@ const CommunityPage = () => {
 
     return (
         <div className="p-4 bg-background min-h-screen pb-20 relative">
-            <h1 className="text-title-1 text-gray-900 mb-6">지금, 불안한 이야기</h1>
+            <h1 className="text-title-1 font-semibold text-primary-600 mb-6">지금, 불안한 이야기</h1>
 
             <h2 className="text-title-3 text-gray-900 mb-3">나의 관심사에 맞는 이야기</h2>
             {/* Interest Cards */}
@@ -93,7 +93,7 @@ const CommunityPage = () => {
             </div>
 
             {/* Status Filter Buttons */}
-            <div className="flex gap-2 mb-4 overflow-x-auto scrollbar-hide px-1">
+            <div className="flex gap-2 mb-4 overflow-x-auto scrollbar-hide px-1 justify-center">
                 <div className="min-w-fit">
                     <Button
                         label="전체"
@@ -128,7 +128,7 @@ const CommunityPage = () => {
 
             {/* Search and Sort */}
             <div className="flex gap-2 mb-6">
-                <div className="flex-1 bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center gap-2">
+                <div className="flex-1 bg-white border border-gray-200 rounded-lg px-4 flex items-center gap-2 h-[48px]">
                     <SearchIcon className="w-5 h-5 text-gray-400" />
                     <input
                         type="text"
@@ -138,9 +138,9 @@ const CommunityPage = () => {
                         onChange={(e) => setSearchKeyword(e.target.value)}
                     />
                 </div>
-                <div className="relative">
+                <div className="relative h-[48px]">
                     <select
-                        className="appearance-none bg-gray-400 text-white rounded-lg pl-4 pr-8 py-3 text-body-3 font-medium outline-none cursor-pointer"
+                        className="appearance-none bg-gray-400 text-white rounded-lg pl-4 pr-8 h-full text-body-3 font-medium outline-none cursor-pointer flex items-center"
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value as SortOption)}
                     >

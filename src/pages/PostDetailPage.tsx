@@ -185,7 +185,7 @@ export default function PostDetailPage() {
                     </div>
 
                     <h1 className="text-title-2 font-bold mb-3">{post.title}</h1>
-                    <p className="text-body-2 text-gray-800 leading-relaxed whitespace-pre-wrap mb-6">
+                    <p className="text-body-5 text-text-primary leading-relaxed whitespace-pre-wrap mb-6">
                         {post.content}
                     </p>
 

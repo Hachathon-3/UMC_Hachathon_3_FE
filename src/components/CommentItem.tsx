@@ -30,8 +30,8 @@ const CommentItem = ({
     const showCheckIcon = isPostAuthor && !hasAdoptedComment && !isReply && comment.author !== '나';
 
     return (
-        <div className={`flex flex-col ${isReply ? 'ml-12 mt-2' : 'border-b border-gray-100 py-4'} ${comment.isAdopted ? 'border border-primary-400 rounded-lg p-4 bg-purple-50/10' : ''}`}>
-            <div className="flex gap-3">
+        <div className={`flex flex-col ${isReply ? 'ml-12 mt-2' : 'border-b border-gray-100 py-4'}`}>
+            <div className={`flex gap-3 ${comment.isAdopted ? 'border border-primary-400 rounded-lg p-4 bg-purple-50/10' : ''}`}>
                 {/* Avatar */}
                 <div className="w-10 h-10 bg-black rounded-full flex-shrink-0"></div>
 
@@ -57,7 +57,7 @@ const CommentItem = ({
                     </div>
 
                     {/* Content */}
-                    <p className="text-body-3 text-gray-800 mb-2 whitespace-pre-wrap leading-relaxed">
+                    <p className="text-body-5 text-text-primary mb-2 whitespace-pre-wrap leading-relaxed">
                         {comment.content}
                     </p>
 

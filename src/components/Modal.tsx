@@ -31,21 +31,23 @@ const Modal = ({ isOpen, onClose, onConfirm, title, confirmText = '채택', canc
                 </p>
 
                 <div className="flex gap-3 w-full">
-                    <Button
-                        label={cancelText}
-                        onClick={onClose}
-                        variant="outline"
-                        size="lg"
-                        width="full"
-                        className="bg-gray-200 border-none text-gray-600 hover:bg-gray-300"
-                    />
-                    <Button
-                        label={confirmText}
-                        onClick={onConfirm}
-                        variant="primary"
-                        size="lg"
-                        width="full"
-                    />
+                    <div className="flex-1">
+                        <Button
+                            label={cancelText}
+                            onClick={onClose}
+                            variant="outline"
+                            size="lg"
+                            className="bg-gray-200 border-none text-gray-600 hover:bg-gray-300 font-bold"
+                        />
+                    </div>
+                    <div className="flex-1">
+                        <Button
+                            label={confirmText}
+                            onClick={onConfirm}
+                            variant="primary"
+                            size="lg"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
