@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
-import homeCat from '../assets/home_cat.png';
+import homeCat from '../assets/cat/onboardingcat.svg';
 import FloatingAddButton from '../components/FloatingAddButton';
 
 const PHRASES = [
@@ -37,7 +37,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div className="relative h-[calc(100vh-64px)] flex flex-col items-center justify-center bg-white p-4">
+        <div className="relative h-[calc(100vh-64px)] flex flex-col items-center justify-center bg-gradient-primary p-4">
             {/* Catnip Display */}
             <div className="absolute top-4 left-4 bg-gray-200 px-4 py-2 rounded-lg shadow-sm">
                 <span className="font-semibold text-gray-700">캣닢 {user?.catnip ?? 0}</span>

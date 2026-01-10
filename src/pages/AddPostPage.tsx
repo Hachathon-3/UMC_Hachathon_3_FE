@@ -17,7 +17,7 @@ export default function AddPostPage() {
     };
 
     return (
-        <div className="min-h-screen bg-white p-5 flex flex-col">
+        <div className="min-h-screen bg-gradient-primary bg-fixed bg-cover p-5 flex flex-col">
             {/* Header */}
             <h1 className="text-title-1 font-bold mb-8 mt-4">나의 불안 작성하기</h1>
 
@@ -40,7 +40,7 @@ export default function AddPostPage() {
                         onChange={(e) => {
                             if (e.target.value.length <= 30) setTitle(e.target.value);
                         }}
-                        className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-primary-400 text-body-2 placeholder-gray-400"
+                        className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-primary-400 text-body-2 placeholder-gray-400 bg-white"
                     />
                     <div className="text-right mt-1 text-detail text-gray-400">
                         {title.length}/30
@@ -55,7 +55,7 @@ export default function AddPostPage() {
                         onChange={(e) => {
                             if (e.target.value.length <= 500) setContent(e.target.value);
                         }}
-                        className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-primary-400 text-body-2 placeholder-gray-400 resize-none flex-1 min-h-[300px]"
+                        className="w-full p-4 rounded-lg border border-gray-200 outline-none focus:border-primary-400 text-body-2 placeholder-gray-400 resize-none flex-1 min-h-[300px] bg-white"
                     />
                     <div className="text-right mt-1 text-detail text-gray-400">
                         {content.length}/500

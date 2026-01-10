@@ -57,7 +57,7 @@ const CommunityPage = () => {
     }, [filterStatus, searchKeyword, sortBy]);
 
     return (
-        <div className="p-4 bg-background min-h-screen pb-20 relative">
+        <div className="p-4 bg-gradient-primary min-h-screen pb-20 relative bg-fixed bg-cover">
             <h1 className="text-title-1 font-semibold text-primary-600 mb-6">지금, 불안한 이야기</h1>
 
             <h2 className="text-title-3 text-gray-900 mb-3">나의 관심사에 맞는 이야기</h2>
@@ -67,10 +67,10 @@ const CommunityPage = () => {
                     interestPosts.map((post) => (
                         <div
                             key={post.id}
-                            className="min-w-[140px] h-[140px] bg-white rounded-2xl p-4 flex flex-col justify-between shadow-sm flex-shrink-0 border border-gray-100 cursor-pointer hover:border-primary-400 transition-colors"
+                            className="w-[130px] h-[140px] bg-white rounded-2xl p-4 flex flex-col justify-between shadow-sm flex-shrink-0 border border-gray-100 cursor-pointer hover:border-primary-400 transition-colors"
                             onClick={() => navigate(`/post/${post.id}`)}
                         >
-                            <p className="text-body-3 font-medium text-gray-900 text-left leading-relaxed line-clamp-3">
+                            <p className="text-body-3 font-medium text-gray-900 text-left leading-relaxed line-clamp-3 truncate">
                                 {post.title}
                             </p>
                             <div className="flex justify-end gap-2">
