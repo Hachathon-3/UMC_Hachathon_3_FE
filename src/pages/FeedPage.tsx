@@ -1,10 +1,12 @@
-export default function FeedPage() {
+
+
+const FeedPage = () => {
     return (
-        <div>
-            <h1>Community Feed</h1>
-            <div>
-                <p>No posts yet. Be the first to share!</p>
-            </div>
+        <div className="p-4">
+            <h1 className="text-2xl font-bold mb-4">피드</h1>
+            <p>피드 페이지 준비 중입니다.</p>
         </div>
     );
-}
+};
+
+export default FeedPage;
