@@ -7,6 +7,7 @@ interface AuthState {
     tokens: AuthTokens | null;
     isAuthenticated: boolean;
     setAuth: (user: User, tokens: AuthTokens) => void;
+    login: (nickname: string, interest: string) => void;
     logout: () => void;
 }
 
@@ -28,6 +29,32 @@ export const useAuthStore = create<AuthState>()(
                 if (tokens.refreshToken) {
                     localStorage.setItem('refreshToken', tokens.refreshToken);
                 }
+            },
+
+            login: (nickname, interest) => {
+                const mockUser: User = {
+                    id: 'user-1', // Fixed ID for testing
+                    email: `${nickname}@example.com`,
+                    name: nickname,
+                    nickname,
+                    interest,
+                    catnip: 0,
+                    provider: undefined,
+                };
+                const mockTokens: AuthTokens = {
+                    accessToken: 'mock-access-token-' + Date.now(),
+                    refreshToken: 'mock-refresh-token-' + Date.now(),
+                    expiresAt: Date.now() + 3600 * 1000,
+                };
+
+                set({
+                    user: mockUser,
+                    tokens: mockTokens,
+                    isAuthenticated: true,
+                });
+
+                localStorage.setItem('accessToken', mockTokens.accessToken);
+                localStorage.setItem('refreshToken', mockTokens.refreshToken);
             },
 
             logout: () => {
