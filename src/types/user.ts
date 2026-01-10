@@ -7,6 +7,8 @@ export interface User {
     profileImage?: string;
     provider?: SocialProvider;
     catnip: number;
+    nickname: string;
+    interest: string;
 }
 
 export interface AuthTokens {

@@ -12,6 +12,18 @@ export const SolveStatus = {
 } as const;
 export type SolveStatus = typeof SolveStatus[keyof typeof SolveStatus];
 
+export interface Comment {
+    id: string;
+    author: string;
+    content: string;
+    createdAt: string;
+    likeCount: number;
+    replyCount: number;
+    replies: Comment[];
+    isLiked: boolean;
+    isAdopted?: boolean;
+}
+
 export interface Post {
     id: number;
     title: string;
@@ -22,4 +34,5 @@ export interface Post {
     commentCount: number;
     status: SolveStatus;
     category: InterestCategory;
+    isLiked?: boolean;
 }

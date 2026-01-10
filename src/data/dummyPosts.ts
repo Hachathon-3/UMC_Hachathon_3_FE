@@ -7,11 +7,12 @@ export const dummyPosts: Post[] = [
         title: "취업 준비 때문에 너무 불안해요",
         content: "매일매일 자소서 쓰고 면접 준비하는데 끝이 안 보이는 것 같아서 숨이 막혀요. 다들 어떻게 버티시나요?",
         createdAt: "2024-01-10 14:30",
-        author: "취준생1",
+        author: "am4v3oyoc",
         likeCount: 15,
         commentCount: 5,
         status: SolveStatus.UNSOLVED,
-        category: InterestCategory.CAREER
+        category: InterestCategory.CAREER,
+        isLiked: false
     },
     {
         id: 2,
@@ -110,6 +111,139 @@ export const dummyPosts: Post[] = [
         likeCount: 9,
         commentCount: 2,
         status: SolveStatus.UNSOLVED,
-        category: InterestCategory.DAILY
+        category: InterestCategory.DAILY,
+        isLiked: false
+    },
+    {
+        id: 11,
+        title: "내가 쓴 글 테스트",
+        content: "이것은 내가 쓴 글입니다. 채택 기능을 테스트해보세요.",
+        createdAt: "방금 전",
+        author: "user-1",
+        likeCount: 0,
+        commentCount: 0,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.DAILY,
+        isLiked: false
+    },
+    {
+        id: 12,
+        title: "이직 고민이 많습니다",
+        content: "지금 다니는 회사가 너무 힘들어서 이직하고 싶은데, 경력이 애매해서 걱정이에요.",
+        createdAt: "1시간 전",
+        author: "am4v3oyoc",
+        likeCount: 5,
+        commentCount: 2,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.CAREER,
+        isLiked: false
+    },
+    {
+        id: 13,
+        title: "주말에도 일 생각뿐이에요",
+        content: "쉬는 날에도 업무 연락이 올까 봐 핸드폰을 손에서 놓지 못하겠어요. 번아웃이 온 걸까요?",
+        createdAt: "2시간 전",
+        author: "am4v3oyoc",
+        likeCount: 12,
+        commentCount: 4,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.CAREER,
+        isLiked: false
+    },
+    {
+        id: 14,
+        title: "연애가 너무 어려워요",
+        content: "상대방의 마음을 모르겠어서 하루 종일 불안해요. 제가 너무 예민한 걸까요?",
+        createdAt: "3시간 전",
+        author: "am4v3oyoc",
+        likeCount: 8,
+        commentCount: 3,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.LOVE,
+        isLiked: false
+    },
+    {
+        id: 15,
+        title: "다이어트 강박 때문에 힘들어요",
+        content: "조금만 먹어도 살찔까 봐 죄책감이 들어요. 건강하게 관리하고 싶은데 마음처럼 안 되네요.",
+        createdAt: "4시간 전",
+        author: "am4v3oyoc",
+        likeCount: 20,
+        commentCount: 7,
+        status: SolveStatus.SOLVED,
+        category: InterestCategory.DAILY,
+        isLiked: false
+    },
+    {
+        id: 16,
+        title: "발표 준비하는데 심장이 터질 것 같아요",
+        content: "내일 중요한 프레젠테이션이 있는데 너무 긴장돼서 청심환이라도 먹어야 할까 봐요.",
+        createdAt: "5시간 전",
+        author: "am4v3oyoc",
+        likeCount: 15,
+        commentCount: 6,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.CAREER,
+        isLiked: false
+    },
+    {
+        id: 17,
+        title: "인간관계 회의감이 들어요",
+        content: "내가 필요할 때만 찾는 친구들... 이런 관계를 계속 유지해야 할까요?",
+        createdAt: "6시간 전",
+        author: "am4v3oyoc",
+        likeCount: 30,
+        commentCount: 15,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.DAILY,
+        isLiked: false
+    },
+    {
+        id: 18,
+        title: "나만 뒤처지는 기분",
+        content: "친구들은 다들 자리 잡고 결혼도 하는데 저만 아직 제자리인 것 같아서 우울해요.",
+        createdAt: "7시간 전",
+        author: "am4v3oyoc",
+        likeCount: 45,
+        commentCount: 20,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.CAREER,
+        isLiked: false
+    },
+    {
+        id: 19,
+        title: "잠이 너무 안 와요",
+        content: "내일 일찍 일어나야 하는데 벌써 새벽 2시네요. 불면증 극복 팁 좀 알려주세요.",
+        createdAt: "8시간 전",
+        author: "am4v3oyoc",
+        likeCount: 3,
+        commentCount: 1,
+        status: SolveStatus.SOLVED,
+        category: InterestCategory.DAILY,
+        isLiked: false
+    },
+    {
+        id: 20,
+        title: "짝사랑 포기해야 할까요?",
+        content: "그 사람은 저한테 관심이 없는 것 같은데 자꾸 기대하게 돼요. 마음 접는 게 맞겠죠?",
+        createdAt: "9시간 전",
+        author: "am4v3oyoc",
+        likeCount: 10,
+        commentCount: 5,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.LOVE,
+        isLiked: false
+    },
+    {
+        id: 21,
+        title: "면접 꿀팁 공유해주세요",
+        content: "다음 주에 드디어 면접 잡혔는데 너무 떨려요. 꼭 합격하고 싶은데 조언 부탁드려요!",
+        createdAt: "10시간 전",
+        author: "am4v3oyoc",
+        likeCount: 25,
+        commentCount: 8,
+        status: SolveStatus.UNSOLVED,
+        category: InterestCategory.CAREER,
+        isLiked: false
     }
 ];
