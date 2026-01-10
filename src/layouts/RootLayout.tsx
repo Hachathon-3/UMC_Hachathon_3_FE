@@ -23,14 +23,14 @@ const RootLayout = () => {
             </div>
 
             {/* Mobile App Container */}
-            <div className="max-w-[375px] min-h-screen mx-auto bg-white shadow-lg relative flex flex-col text-gray-800 md:hidden lg:flex">
-                <header className="p-4 bg-gray-50 border-b border-gray-200">
+            <div className="max-w-[375px] h-screen mx-auto bg-white shadow-lg relative flex flex-col text-gray-800 md:hidden lg:flex overflow-hidden">
+                <header className="sticky top-0 z-10 p-4 bg-gray-50 border-b border-gray-200">
                     <nav>
                         <h1 className="text-2xl font-semibold m-0 text-gray-800">Anxiety Community</h1>
                     </nav>
                 </header>
 
-                <main className="flex-1 p-4 overflow-y-auto">
+                <main className="flex-1 overflow-y-auto">
                     <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
                         <Outlet />
                     </Suspense>
