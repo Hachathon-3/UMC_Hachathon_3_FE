@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { InterestCategory, SolveStatus } from '../types/post';
 import Dropdown from '../components/Dropdown';
 import Button from '../components/Button';
+import { useAuthStore } from '../store/authStore';
+import { dummyPosts } from '../data/dummyPosts';
 
 export default function AddPostPage() {
     const navigate = useNavigate();
@@ -12,8 +14,41 @@ export default function AddPostPage() {
 
     const isFormValid = category !== null && title.trim().length > 0 && content.trim().length > 0;
 
+    const { user } = useAuthStore();
+    // Assuming user-1 for now if not logged in, but better to use store
+    const currentUserId = user?.id || 'user-1';
+
     const handlePublish = () => {
-        // Logic cleared as requested
+        if (!isFormValid || !category) return;
+
+        const newPost: any = { // Using any temporarily to bypass strict type check if needed, but better to match Post type
+            id: Date.now(), // Simple unique ID
+            title: title,
+            content: content,
+            createdAt: new Date().toLocaleString('ko-KR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            }).replace(/\. /g, '-').replace('.', ''), // Format: YYYY-MM-DD HH:mm
+            author: currentUserId,
+            likeCount: 0,
+            commentCount: 0,
+            status: SolveStatus.UNSOLVED,
+            category: category,
+            isLiked: false
+        };
+
+        // Add to dummy data (in-memory only)
+        // Since dummyPosts is imported as a reference, modifying it affects the in-memory data
+        dummyPosts.unshift(newPost);
+
+        // Show success alert? or just navigate
+        // alert('게시글이 등록되었습니다.');
+        // alert('게시글이 등록되었습니다.');
+        navigate(`/post/${newPost.id}`);
     };
 
     return (
