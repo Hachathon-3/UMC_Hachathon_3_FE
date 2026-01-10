@@ -6,6 +6,7 @@ export interface User {
     name: string;
     profileImage?: string;
     provider?: SocialProvider;
+    catnip: number;
 }
 
 export interface AuthTokens {

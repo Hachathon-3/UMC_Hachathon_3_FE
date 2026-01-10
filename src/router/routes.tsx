@@ -9,6 +9,9 @@ import PostDetailPage from '../pages/PostDetailPage';
 import AddPostPage from '../pages/AddPostPage';
 import OAuthCallback from '../pages/OAuthCallback';
 import NotFound from '../pages/NotFound';
+import CommunityPage from '../pages/CommunityPage';
+import MyActivityPage from '../pages/MyActivityPage';
+import CustomizePage from '../pages/CustomizePage';
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +39,30 @@ export const router = createBrowserRouter([
                 element: (
                     <ProtectedRoute>
                         <PostDetailPage />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: 'community',
+                element: (
+                    <ProtectedRoute>
+                        <CommunityPage />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: 'my-activity',
+                element: (
+                    <ProtectedRoute>
+                        <MyActivityPage />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: 'customize',
+                element: (
+                    <ProtectedRoute>
+                        <CustomizePage />
                     </ProtectedRoute>
                 ),
             },
