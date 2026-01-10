@@ -1,4 +1,4 @@
-export default function FeedPage() {
+export default function CommunityPage() {
     return (
         <div>
             <h1>Community Feed</h1>

@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { pageRoutes } from './pageRoutes';
-import Layout from '../components/Layout';
+import RootLayout from '../layouts/RootLayout';
 
 export default function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route element={<Layout />}>
+                <Route element={<RootLayout />}>
                     {pageRoutes.map((route) => (
                         <Route
                             key={route.path}
