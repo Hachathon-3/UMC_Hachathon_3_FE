@@ -31,7 +31,7 @@ const SignupPage = () => {
     if (isFormValid && selectedCategory) {
       login(nickname, selectedCategory);
       // Navigate to home or feed after signup
-      navigate('/');
+      navigate('/community');
     }
   };
 
