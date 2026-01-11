@@ -31,12 +31,12 @@ const SignupPage = () => {
     if (isFormValid && selectedCategory) {
       login(nickname, selectedCategory);
       // Navigate to home or feed after signup
-      navigate('/');
+      navigate('/community');
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-primary p-5 flex flex-col">
+    <div className="min-h-screen bg-gradient-primary bg-fixed bg-cover p-5 flex flex-col">
       {/* Header */}
       <div className="mt-10 mb-10">
         <h1 className="text-title-1 text-gray-900 mb-2">

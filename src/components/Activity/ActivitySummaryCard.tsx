@@ -19,27 +19,23 @@ const ActivitySummaryCard: React.FC<ActivitySummaryCardProps> = ({
 }) => {
     // Determine active colors based on variant
     const getActiveStyles = () => {
-        if (!isActive) return 'bg-white border-gray-200 text-gray-900 shadow-sm';
+        if (!isActive) return 'bg-white border-gray-200 text-gray-900';
 
-        // Active states (Using border color to indicate selection, but background remains white or slight tint)
-        // Adjusting to match the image style: Active cards seem to have a colored border or icon color.
-        // Let's make the border colored when active.
+        // Active states with colored borders
         switch (variant) {
             case 'solved':
-                return 'bg-white border-secondary-700 text-secondary-700 ring-1 ring-secondary-700';
+                return 'bg-white border-secondary-700 text-secondary-700';
             case 'unsolved':
-                return 'bg-white border-status-alert text-status-alert ring-1 ring-status-alert';
+                return 'bg-white border-status-alert text-status-alert';
             case 'helped':
-                return 'bg-white border-primary-400 text-primary-400 ring-1 ring-primary-400';
+                return 'bg-white border-primary-400 text-primary-400';
             case 'all':
             default:
-                return 'bg-white border-gray-400 text-gray-900 ring-1 ring-gray-400';
+                return 'bg-white border-gray-400 text-gray-900';
         }
     };
 
     const getIconColor = () => {
-        if (isActive) return 'currentColor'; // Uses text color from parent
-
         switch (variant) {
             case 'solved': return 'text-secondary-700';
             case 'unsolved': return 'text-status-alert';
@@ -52,21 +48,18 @@ const ActivitySummaryCard: React.FC<ActivitySummaryCardProps> = ({
         <button
             onClick={onClick}
             className={`
-                relative flex flex-col p-4 rounded-xl border transition-all duration-200 text-left
+                relative flex items-center gap-3 p-4 rounded-xl border-2 transition-all duration-200
                 ${getActiveStyles()}
-                hover:shadow-md h-[100px] justify-between cursor-pointer
+                hover:shadow-md h-[100px] cursor-pointer
             `}
         >
-            <div className="flex justify-between items-start w-full">
-                <div className={`text-2xl ${getIconColor()}`}>
-                    {icon}
-                </div>
-                {/* Optional: Add a small indicator or just layout spacing */}
+            <div className={`shrink-0 ${getIconColor()}`}>
+                {icon}
             </div>
 
-            <div className="flex flex-col">
-                <span className={`text-xs font-medium ${isActive ? '' : 'text-gray-500'}`}>{title}</span>
-                <span className={`text-xl font-bold ${isActive ? '' : 'text-gray-900'}`}>{count}</span>
+            <div className="flex flex-col items-start justify-center flex-1">
+                <span className="text-body-4 font-medium text-gray-900 mb-1">{title}</span>
+                <span className="text-title-1 font-bold text-gray-900">{count}</span>
             </div>
         </button>
     );

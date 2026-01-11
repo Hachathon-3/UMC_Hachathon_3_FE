@@ -24,7 +24,7 @@ const RootLayout = () => {
 
             {/* Mobile App Container */}
             <div className="max-w-[375px] h-screen mx-auto bg-white shadow-lg relative flex flex-col text-gray-800 md:hidden lg:flex overflow-hidden">
- 
+
 
                 <main className="flex-1 overflow-y-auto">
                     <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>

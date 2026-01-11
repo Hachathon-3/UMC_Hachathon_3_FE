@@ -14,7 +14,7 @@ export default function BottomNav() {
     ];
 
     return (
-        <nav className="flex justify-around p-2 bg-white border-t border-gray-200 sticky bottom-0 z-50 pb-6">
+        <nav className="flex justify-around p-2 bg-[#D7CAEF] border-gray-200 sticky bottom-0 z-50 pb-6">
             {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (

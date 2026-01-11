@@ -67,10 +67,10 @@ const CommunityPage = () => {
                     interestPosts.map((post) => (
                         <div
                             key={post.id}
-                            className="min-w-[140px] h-[140px] bg-white rounded-2xl p-4 flex flex-col justify-between shadow-sm flex-shrink-0 border border-gray-100 cursor-pointer hover:border-primary-400 transition-colors"
+                            className="w-[130px] h-[140px] bg-white rounded-2xl p-4 flex flex-col justify-between shadow-sm flex-shrink-0 border border-gray-100 cursor-pointer hover:border-primary-400 transition-colors"
                             onClick={() => navigate(`/post/${post.id}`)}
                         >
-                            <p className="text-body-3 font-medium text-gray-900 text-left leading-relaxed line-clamp-3">
+                            <p className="text-body-3 font-medium text-gray-900 text-left leading-relaxed line-clamp-3 truncate">
                                 {post.title}
                             </p>
                             <div className="flex justify-end gap-2">
