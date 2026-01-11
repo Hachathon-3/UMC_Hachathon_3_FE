@@ -144,7 +144,7 @@ export default function PostDetailPage() {
 
     // Check if current user is the author of the post
     // post.author is now an ID, so we compare it with user.id
-    const isPostAuthor = user && post?.author === user.id;
+    const isPostAuthor = user ? post?.author === user.id : false;
 
     if (!post) {
         return (

@@ -57,7 +57,7 @@ const SignupPage = () => {
             placeholder="닉네임"
             value={nickname}
             onChange={handleNicknameChange}
-            className={`w-full p-4 rounded-lg border text-body-2 outline-none transition-colors placeholder-gray-400 bg-background
+            className={`w-full p-4 rounded-lg border text-body-2 outline-none transition-colors placeholder-gray-400 bg-background bg-fixed bg-cover
                             ${nickname.length === 0
                 ? 'border-gray-200 focus:border-primary-400'
                 : isNicknameValid

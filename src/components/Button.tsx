@@ -29,7 +29,7 @@ const Button = ({
 
     const variantStyles = {
         primary: !disabled
-            ? "bg-primary-400 text-white hover:bg-primary-500 cursor-pointer"
+            ? "bg-primary-400 text-white hover:bg-primary-600 cursor-pointer"
             : "bg-gray-500 text-white cursor-not-allowed opacity-50",
         outline: !disabled
             ? "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 cursor-pointer"
