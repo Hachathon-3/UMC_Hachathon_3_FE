@@ -96,7 +96,7 @@ export default {
                 black: '#000000',
             },
             backgroundImage: {
-                'gradient-primary': 'linear-gradient(to bottom, #FFFFFF, #A7A8F0)'
+                'gradient-primary': 'linear-gradient(to bottom, #F7F7FA, #D7CAEF)'
             }
         },
     },

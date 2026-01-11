@@ -115,7 +115,7 @@ const MyActivityPage = () => {
     };
 
     return (
-        <div className="bg-background min-h-screen pb-20 p-5">
+        <div className="bg-gradient-primary min-h-screen pb-20 p-5 bg-fixed bg-cover">
             {/* Header */}
             <div className="mb-8 mt-4">
                 <h1 className="text-title-1 font-bold text-primary-400 mb-1">활동 기록</h1>

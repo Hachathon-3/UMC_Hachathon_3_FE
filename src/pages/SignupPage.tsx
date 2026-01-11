@@ -36,7 +36,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background p-5 flex flex-col">
+    <div className="min-h-screen bg-gradient-primary p-5 flex flex-col">
       {/* Header */}
       <div className="mt-10 mb-10">
         <h1 className="text-title-1 text-gray-900 mb-2">
@@ -57,7 +57,7 @@ const SignupPage = () => {
             placeholder="닉네임"
             value={nickname}
             onChange={handleNicknameChange}
-            className={`w-full p-4 rounded-lg border text-body-2 outline-none transition-colors placeholder-gray-400
+            className={`w-full p-4 rounded-lg border text-body-2 outline-none transition-colors placeholder-gray-400 bg-background bg-fixed bg-cover
                             ${nickname.length === 0
                 ? 'border-gray-200 focus:border-primary-400'
                 : isNicknameValid
